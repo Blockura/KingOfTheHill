@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Participate in the King of the Hill crypto game and get the entire treasury of the kingdom."/>
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>King of the Hill Crypto Game</title>
+
+</head>
+<body>
+
+<main role="main" class="container">
+
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center" style="    margin: -30px 0 30px 0;">
+                <a class="nav-link" href="#home">MAIN</a>
+                <a class="nav-link" href="#how">HOW TO PLAY</a>
+                <a class="nav-link" href="#about">ABOUT</a>
+            </nav>
+        </div>
+    </header>
+
+    <div style="text-align: center; width: 100%">
+        <a name="home"></a>
+        <img src="logo.fw.png" style="width: 30%">
+        <h1>King of the Hill</h1>
+        <br>
+        <br>
+
+        <div>
+            <div>
+                <h1 id=""><b>Treasury</b><br><span id="treasury">0</span> ETH</h1>
+            </div>
+
+            <div class="card swapcard  " style="width: 100%">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">CURRENT KING</h6>
+                    <br>
+                    <br>
+                    <h2 class="card-text currentKing">0x0</h2>
+                </div>
+            </div>
+
+            <div class="card swapcard  ">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">MINIMAL BID</h6>
+                    <h2 class="card-text minBid">0.0001 ETH</h2>
+                    <a href="#" id="makeBid" class="card-link btn btn-primary btn-lg">MAKE BID</a>
+                </div>
+            </div>
+
+            <div class="card swapcard  ">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">BLOCKS REMAIN</h6>
+                    <h2 class="card-text blocksRemain">5 BLOCKS</h2>
+                    <a href="#" id="claim" class="card-link btn btn-primary btn-lg">CLAIM</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div style="text-align: center; width: 100%">
+        <br>
+        <br>
+        <br>
+        <br>
+        <a name="how"></a>
+        <h1>How to play</h1>
+
+        <p>Play the game and get the chance to win all the money in the king's treasury.</p>
+
+        <p>Place your bet and try to hold out until the end of the remaining blocks counter.<br>As soon as the counter reaches 0, immediately press the Climb button and get your win!</p>
+
+        <b>Try not to miss!</b>
+        <br>
+        <br>
+
+        <p>The minimum bet increases by 0.000029 Ether each bet. All bets go to the treasury with the exception of 5% to reward the contract developer.</p>
+
+        <b>Good luck with the game!</b>
+
+    </div>
+
+    <div style="text-align: center; width: 100%">
+        <br>
+        <br>
+        <br>
+        <br>
+        <a name="about"></a>
+        <h1>About</h1>
+
+        <a href="" target="_blank">Contract address at Etherscan</a>
+        <br>
+        <br>
+        Created with love by me :)
+
+    </div>
+</main>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

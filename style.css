@@ -1,0 +1,226 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+/*
+    * Globals
+    */
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #1f1f1f;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: .05rem solid #fff;
+}
+
+/*
+ * Base structure
+ */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    color: #000;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    padding: 50px 10px;
+}
+
+.cover-container {
+    max-width: 50em;
+}
+
+/*
+ * Header
+ */
+.masthead {
+    margin-bottom: 2rem;
+}
+
+.masthead-brand {
+    margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    color: #000;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+
+}
+
+/*
+ * Cover
+ */
+.cover {
+    padding: 4em 0rem;
+}
+
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+    margin-top: 50px;
+    color: rgba(255, 255, 255, .5);
+}
+
+body:not(.web3) .web3true {
+    display: none;
+}
+
+ .swapcard {
+    height: 175px;
+    color: white;
+}
+
+.swapcard2 {
+    height: 115px;
+}
+
+.web3 .web3false {
+    display: none
+}
+
+
+
+.yield-badge {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 20px;
+}
+
+body.approved .not-approved-spend {
+    display: none
+}
+
+body:not(.approved) .approved-spend {
+    display: none
+}
+
+* {
+    font-family: 'myFont', Arial, Times New Roman !important;
+}
+
+html {
+    height: 100%;
+    background-color: #FAD048 !important
+}
+
+body {
+    background-color: #FAD048 !important
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.swapcard, .swapcard2 {
+    display: inline-block;
+    width: 300px;
+    /*height: 240px;*/
+    margin: 10px;
+    transition: 1s box-shadow;
+}
+
+.swapcard:hover, .swapcard2:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3)
+}
+
+.tokenpair {
+    margin-bottom: 15px;
+}
+
+.token1, .token2 {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 99px;
+    border: 3px solid #FFF;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    background: #000;
+    background-size: cover !important;
+}
+
+.token2 {
+    position: relative;
+    right: 8px
+}
+
+.token1 {
+    position: relative;
+    left: 8px;
+    z-index: 99;
+}
+
+
+.btn-primary {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #000000;
+}
+
+.balance, .tokenprice, .tvl, .mcap, .supply {
+    color: #fff;
+}
+
+.text-muted {
+    color: #dddfe1 !important;
+}
+
+.badge-primary {
+    background-color: #ff0000;
+}
+
+@keyframes blink {
+    0%   {background-color:red; }
+    50% {background-color:inherit; }
+    100%   {background-color:red; }
+}
+
+.red-button{
+    /*background: red;*/
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
