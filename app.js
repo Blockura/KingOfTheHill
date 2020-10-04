@@ -205,7 +205,7 @@ let ethconnected = false;
 
 let contract;// = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
 
-const CONTRACT_ADDRESSES = {main: '0x3a5003c4db20b6b4c3473971db7ecf30831ff71b', ropsten: '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B'}; ///web3.eth.net.getNetworkType()
+const CONTRACT_ADDRESSES = {main: '0x9196FC1d8b6B4Eb0C30a98380eeA913be5FB1741', ropsten: '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B'}; ///web3.eth.net.getNetworkType()
 const ETHERSCAN_URLS = {main: 'https://etherscan.io', ropsten: 'https://ropsten.etherscan.io'};
 
 async function init() {
