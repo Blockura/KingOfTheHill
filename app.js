@@ -195,7 +195,8 @@ const ABI = [
     }
 ];
 
-const CONTRACT_ADDRESS = '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B';
+//let CONTRACT_ADDRESS = '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B';
+
 
 //***************************
 
@@ -204,9 +205,23 @@ let ethconnected = false;
 
 let contract;// = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
 
+const CONTRACT_ADDRESSES = {main: '0x3a5003c4db20b6b4c3473971db7ecf30831ff71b', ropsten: '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B'}; ///web3.eth.net.getNetworkType()
+const ETHERSCAN_URLS = {main: 'https://etherscan.io', ropsten: 'https://ropsten.etherscan.io'};
+
 async function init() {
-    contract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
+
     setInterval(async function update() {
+
+        contract = new web3.eth.Contract(ABI, CONTRACT_ADDRESSES[await web3.eth.net.getNetworkType()]);
+
+        if(await web3.eth.net.getNetworkType() !== 'main') {
+            $('#header').text('King of the ' + (await web3.eth.net.getNetworkType()).toUpperCase());
+        }else{
+            $('#header').text('King of the Hill');
+        }
+
+
+
         let blocksRemain = await contract.methods.blocksRemain().call();
         $('.blocksRemain').text(blocksRemain + ' BLOCKS');
 
@@ -253,7 +268,7 @@ async function init() {
     $('#claim').click(async function claim() {
         let tx = await contract.methods.claim().send({from: window.ethaddress});
         console.log(tx)
-        window.open("https://ropsten.etherscan.io/tx/" + tx.transactionHash);
+        window.open(ETHERSCAN_URLS[await web3.eth.net.getNetworkType()] + "/tx/" + tx.transactionHash);
     })
 
 
