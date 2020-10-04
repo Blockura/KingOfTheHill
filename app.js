@@ -1,8 +1,6 @@
 //let web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/2ff10f83a74943d9861720160bcddf45'));
 //let web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/2ff10f83a74943d9861720160bcddf45'));
 
-let ethconnected = false;
-
 const ABI = [
     {
         "inputs": [],
@@ -198,6 +196,11 @@ const ABI = [
 ];
 
 const CONTRACT_ADDRESS = '0x3A5003C4DB20b6B4C3473971dB7ecf30831ff71B';
+
+//***************************
+
+let ethconnected = false;
+
 
 let contract;// = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
 
