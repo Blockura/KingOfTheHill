@@ -250,7 +250,7 @@ async function init() {
             $('#claim').removeClass('red-button');
         }
 
-        if(Number(blocksRemain) < 1 && currentKing.toLowerCase() !== window.ethaddress.toLowerCase()) {
+        if(/*Number(blocksRemain) < 1 &&*/ currentKing.toLowerCase() !== window.ethaddress.toLowerCase()) {
             $('#makeBid').addClass('red-button');
         } else {
             $('#makeBid').removeClass('red-button');
