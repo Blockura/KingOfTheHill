@@ -11,6 +11,8 @@
                |___/                                             
 
 Play game at https://lailune.github.io/KingOfTheHill
+Original repo: https://github.com/lailune/KingOfTheHill
+by @lailune
 
 Don't forget MetaMask!
 ***************************
