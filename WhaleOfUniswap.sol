@@ -1,28 +1,27 @@
 /*
 
+ _    _  _   _   ___   _      _____   _____ ______   _   _  _   _  _____  _____  _    _   ___  ______ 
+| |  | || | | | / _ \ | |    |  ___| |  _  ||  ___| | | | || \ | ||_   _|/  ___|| |  | | / _ \ | ___ \
+| |  | || |_| |/ /_\ \| |    | |__   | | | || |_    | | | ||  \| |  | |  \ `--. | |  | |/ /_\ \| |_/ /
+| |/\| ||  _  ||  _  || |    |  __|  | | | ||  _|   | | | || . ` |  | |   `--. \| |/\| ||  _  ||  __/ 
+\  /\  /| | | || | | || |____| |___  \ \_/ /| |     | |_| || |\  | _| |_ /\__/ /\  /\  /| | | || |    
+ \/  \/ \_| |_/\_| |_/\_____/\____/   \___/ \_|      \___/ \_| \_/ \___/ \____/  \/  \/ \_| |_/\_|
+ 
 
-  _  ___                      __   _   _            _    _ _ _ _ 
- | |/ (_)                    / _| | | | |          | |  | (_) | |
- | ' / _ _ __   __ _    ___ | |_  | |_| |__   ___  | |__| |_| | |
- |  < | | '_ \ / _` |  / _ \|  _| | __| '_ \ / _ \ |  __  | | | |
- | . \| | | | | (_| | | (_) | |   | |_| | | |  __/ | |  | | | | |
- |_|\_\_|_| |_|\__, |  \___/|_|    \__|_| |_|\___| |_|  |_|_|_|_|
-                __/ |                                            
-               |___/                                             
+Telegram: https://t.me/whaleofuniswap
+Play game at https://Blockura.github.io/WhaleOfUniswap
 
-Play game at https://lailune.github.io/KingOfTheHill
-Original repo: https://github.com/lailune/KingOfTheHill
-by @lailune
-
-Don't forget MetaMask!
+// credits to
+// Original repo: https://github.com/lailune/KingOfTheHill
+// by @lailune
 ***************************
 HeyHo! 
 
-Who Wants to Become King of the Hill? Everybody wants!
+Who Wants to Become the Whale of UNISWAP? Everybody wants!
 
-What to get the king of the hill? All the riches!
+What to get the whale of uniswap? All the aped in coins!
 
-Become the king of the mountain and claim all the riches saved on this contract! Trust me, it's worth it!
+Become the whale of Uniswap and claim all the aped in ether saved on this contract! Trust me, it's worth it!
 
 Who will be in charge and take everything, and who will lose? It's up to you to decide. Take action!
 
@@ -186,7 +185,7 @@ library SafeMath {
     }
 }
 
-contract KingOfTheHill{
+contract WhaleOfUniswap{
     using SafeMath for uint256;
 
     //It's me
@@ -201,11 +200,11 @@ contract KingOfTheHill{
     //Current balance
     uint256 public currentBalance = 0;
 
-    //Min participant bid (25 cent)
-    uint256 public  minBid = 725000 gwei;
+    //Min participant bid
+    uint256 public  minBid = 1725000 gwei;
 
     //Min Bid incrase for every bid
-    uint public constant BID_INCRASE = 29000 gwei;
+    uint public constant BID_INCRASE = 129000 gwei;
 
     //Revenue for me :)
     uint public constant OWNER_REVENUE_PERCENT = 5;
@@ -222,7 +221,7 @@ contract KingOfTheHill{
 
 
 
-    //We have a new king! All glory to new king!
+    //We have a new whale! All glory to the new whale!
     event NewKing(address indexed user, uint256 amount);
 
     //We have a winner
@@ -275,7 +274,7 @@ contract KingOfTheHill{
       //Send owner revenue
       _owner.transfer(ownerRevenue);
 
-      //We have a new King!
+      //We have a new WHALE!
       emit NewKing(msg.sender, realIncome);
     }
 
@@ -289,7 +288,7 @@ contract KingOfTheHill{
     function claim() public payable {
 
         //Check King is a king
-        require(currentKing == msg.sender, "You are not king");
+        require(currentKing == msg.sender, "You are not a whale");
 
         //Check balance
         require(currentBalance > 0, "The treasury is empty");
@@ -310,7 +309,7 @@ contract KingOfTheHill{
         currentKing = address(0x0);
         lastKingBlock = block.number;
         blockDistance = START_BLOCK_DISTANCE;
-        minBid = 725000 gwei;
+        minBid = 925000 gwei;
     }
 
     /**
